@@ -1,0 +1,30 @@
+.home-container {
+    margin: 0;
+    padding: 0;
+    background-image: url("/img/homePage.jpg");
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 1px blue;
+}
+
+
+
+.title {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 60px;
+    color: #f5f5f5;
+    text-shadow: 0px 0px 10px rgb(46, 46, 46);
+}
+
+.motto {
+    font-family: sans-serif;
+    font-style: italic;
+    color: #8bbbf5;
+    /*text-shadow: 0px 0px 10px rgb(28, 28, 28);*/
+}
