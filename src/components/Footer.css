@@ -1,0 +1,22 @@
+img {
+    height: 4vh;
+    margin-right: 5px;
+}
+
+a {
+    text-shadow: 0px 0px 10px rgb(46, 46, 46);
+    font-weight: bold;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.footer-container {
+    display: flex;
+    /*border: solid 1px red;*/
+    text-align: right;
+    align-items: center;
+    color: whitesmoke;
+}
+
