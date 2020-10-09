@@ -4,11 +4,9 @@ img {
 }
 
 a {
+    color: white;
+    text-decoration: none;
     font-weight: bold;
-}
-
-a:hover {
-    cursor: pointer;
 }
 
 .footer-container {
@@ -17,5 +15,8 @@ a:hover {
     text-align: right;
     align-items: center;
     color: whitesmoke;
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
 }
 

@@ -5,7 +5,7 @@ function Footer() {
     return (
         <div className="footer-container">
             <img src="/img/github.svg" alt="github"/>
-            <a>Zergy</a>
+            <a href="https://github.com/zzergy">Zergy</a>
         </div>
     )
 }
