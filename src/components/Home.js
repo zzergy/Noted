@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css"
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 
- import {BrowserRouter as Router, Link} from "react-router-dom";
+ import {Link} from "react-router-dom";
 
 function Home() {
     return (
@@ -11,7 +11,6 @@ function Home() {
                     <h1 className="title">Welcome to Noted</h1>
                     <Link to="/newNote"><button className="get-started-button">Get Started</button></Link>
                 </div>
-
                 <Footer/>
             </div>
     )
