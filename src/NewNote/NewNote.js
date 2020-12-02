@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {NoteContext} from "../App";
 import SideBar from "../components/BurgerMenu/SideBar";
 import * as BsIcons from "react-icons/bs"
+import Footer from "../components/Footer/Footer";
 
 const mainContainerStyle = {
     display: "flex",
@@ -14,7 +15,7 @@ const mainContainerStyle = {
 const labelStyle = {
     marginBottom:" 10px",
     fontSize: "18px",
-    color: "white",
+    color: "#5293FB",
     fontWeight: "bold"
 };
 
@@ -60,6 +61,7 @@ function NewNote() {
 
             {/*TODO: Change the layout and design of the submission form */}
             <div className="form-container">
+                <div className="background"></div>
                 <h1>Create new Note</h1>
 
                 <form className="form" onSubmit={handleSubmit}>
@@ -82,9 +84,11 @@ function NewNote() {
                         placeholder="Write your note here.."
                         onChange={handleChange}
                     />
-                    <button><BsIcons.BsPencil size="20px"/>Save Note</button>
+                    <button className="submit-button"><BsIcons.BsPencil size="20px"/>Save Note</button>
                 </form>
             </div>
+
+            <Footer/>
         </div>
     );
 }

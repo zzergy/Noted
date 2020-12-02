@@ -1,56 +1,17 @@
-.top-navigation-container {
-    height: 8vh;
-    border: solid 1px red;
-
-    display: flex;
-    flex-direction: row;
-}
-
-.top-navigation-container > section {
-    width: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-}
-
-.logo {
-    font-family: sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    color: #47607b;
-}
-
-.hamburger-menu-button {
-    /*border: 1px solid red;*/
-    border: none;
-    height: 30px;
-    width: 30px;
-
-    background-color: transparent;
-    background-image: url("/img/burgerMenuIcon.svg");
-    background-size: 30px 30px;
-    background-repeat: no-repeat;
-
-}
-
-/*.note-title {*/
-/*    margin: 10px 0 10px 40vw;*/
-/*}*/
-
 .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background: rgb(115, 202, 241);
-    background: linear-gradient(200deg, rgba(115, 202, 241, 1) 0%, rgb(178, 127, 255) 50%, rgba(255, 166, 238, 1) 100%);
-
+    background-image: url("/img/2.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-top: 11vh;
 }
 
 h1 {
-    color: white;
+    color: #5293FB;
     padding-bottom: 30px;
 }
 
@@ -58,29 +19,33 @@ h1 {
     /*border: solid 1px red;*/
     display: flex;
     flex-direction: column;
-    width: 45vw;
+    width: 40vw;
 }
 
 #title {
     margin-bottom: 15px;
     padding: 10px;
     font-size: larger;
-    border-radius: 3px;
-    border: none;
+    border-radius: 5px;
+    border: 1px solid #5293FB;
+    box-shadow: 0px 5px 5px 0px rgba(94, 52, 153, 0.32);
+
+
 }
 
 #text {
     padding: 10px;
-    border-radius: 3px;
-    border: none;
+    border-radius: 5px;
+    border: 1px solid #5293FB;
+    box-shadow: 0px 5px 5px 0px rgba(94, 52, 153, 0.75);
 }
 
-button {
+.submit-button {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: #7f48d1;
+    background-color: #5293FB;
     padding: 12px;
     border: none;
     border-radius: 3px;
@@ -91,7 +56,6 @@ button {
     font-size: larger;
 
     transition-duration: 460ms;
-
 }
 
 button:hover {
