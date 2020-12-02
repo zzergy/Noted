@@ -5,7 +5,7 @@ import * as GrIcons from "react-icons/gr"
 import {SideBarData} from "./SideBarData";
 import "./SideBar.css"
 import {IconContext} from "react-icons";
-
+import Logo from "../Logo.js"
 function SideBar() {
     const [sidebarActive, setSideBarActive] = useState(false);
 
@@ -14,13 +14,15 @@ function SideBar() {
     };
 
     return (
-        <IconContext.Provider value={{color: "#9268d1", size: "22px"}}>
+        <IconContext.Provider value={{color: "#5293FB", size: "22px"}}>
             <div className='navbar'>
                 <Link to="#" className="menu-bars">
                     {/*Triggers the side bar to open*/}
-                    <GoIcons.GoThreeBars onClick={toggleSideBar} size="29px"/>
+                    <GoIcons.GoThreeBars onClick={toggleSideBar} size="24px"/>
                 </Link>
+                <Logo/>
             </div>
+
             <nav className={sidebarActive ? "nav-menu active" : "nav-menu"}>
                 <ul className="nav-menu-items">
                     <li className="navbar-toggle">
