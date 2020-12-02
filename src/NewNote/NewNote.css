@@ -29,6 +29,7 @@ h1 {
     border-radius: 5px;
     border: 1px solid #5293FB;
     box-shadow: 0px 5px 5px 0px rgba(94, 52, 153, 0.32);
+    color: #264397;
 
 
 }
@@ -38,6 +39,7 @@ h1 {
     border-radius: 5px;
     border: 1px solid #5293FB;
     box-shadow: 0px 5px 5px 0px rgba(94, 52, 153, 0.75);
+    color: #264397;
 }
 
 .submit-button {
