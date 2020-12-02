@@ -9,7 +9,7 @@ function Home() {
             <div className="title-card">
                 <h1 className="title">Welcome to Noted</h1>
                 <Link to="/newNote">
-                    <button className="get-started-button">Get Started</button>
+                    <button className="get-started-button">Create a Note</button>
                 </Link>
             </div>
             <Footer/>
