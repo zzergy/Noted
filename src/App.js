@@ -5,16 +5,28 @@ import NewNote from "./NewNote/NewNote";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Notes from "./components/Notes";
 
+//Create context with 2 values: allNotes that is an array and addToNotesData that is a function
+//This states what the context will want, you have to provide the values
 export const NoteContext = React.createContext({
-    'allNotes': [], addToNotesData: () => {}
+    'allNotes': [],
+    addToNotesData: () => {}
 });
 
+//Gets the current notesData from the local browser storage
 const notesDataJson = localStorage.getItem('notesData');
+
+//Parses the data to an object or an array
 const allNotes = JSON.parse(notesDataJson) || [];
 
+//Adding a new note to the local storage
 const addToNotesData = (newNote) => {
+    //Push the new note to the array allNotes
     allNotes.push(newNote);
+
+    //Parse the array to json format
     const notesDataJson = JSON.stringify(allNotes);
+
+    //Set the new data to the local storage
     localStorage.setItem('notesData', notesDataJson);
 };
 

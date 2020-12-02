@@ -17,16 +17,20 @@ function SideBar() {
         <IconContext.Provider value={{color: "#293441"}}>
             <div className='navbar'>
                 <Link to="#" className="menu-bars">
+                    {/*Triggers the side bar to open*/}
                     <GoIcons.GoThreeBars onClick={toggleSideBar}/>
                 </Link>
             </div>
             <nav className={sidebarActive ? "nav-menu active" : "nav-menu"}>
                 <ul className="nav-menu-items">
                     <li className="navbar-toggle">
+                        {/*X button*/}
                         <Link to="#" className="menu-exit">
                             <GrIcons.GrFormClose onClick={toggleSideBar}/>
                         </Link>
                     </li>
+
+                    {/*Loading the navigation bar items from SideBarData*/}
                     {SideBarData.map((item, index) => {
                         return (
                             <li key={index} className={item.styleClass}>

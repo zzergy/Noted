@@ -6,6 +6,7 @@ function Notes() {
 
     return (
         <>
+            {/*Displays the saved notes*/}
             {
                 allNotes.map(
                     (item, index) => (
