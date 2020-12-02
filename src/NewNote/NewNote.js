@@ -3,12 +3,20 @@ import "./NewNote.css"
 import {Link} from "react-router-dom";
 import {NoteContext} from "../App";
 import SideBar from "../components/BurgerMenu/SideBar";
+import * as BsIcons from "react-icons/bs"
 
 const mainContainerStyle = {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    height: "100vh"
 };
 
+const labelStyle = {
+    marginBottom:" 10px",
+    fontSize: "18px",
+    color: "white",
+    fontWeight: "bold"
+};
 
 function NewNote() {
     const [note, setNote] = useState({title: "", text: ""});
@@ -16,6 +24,8 @@ function NewNote() {
     //Get the notes data from the context by destructuring
     const {addToNotesData} = useContext(NoteContext);
 
+
+    //TODO: If there is no text don't submit the form
     //Submit the form
     function handleSubmit(event) {
         //Prevents the page from reloading
@@ -47,29 +57,34 @@ function NewNote() {
     return (
         <div style={mainContainerStyle}>
             <SideBar/>
-            {/*TODO: Change the layout and design of the submission form */}
-            <form className="form-container" onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="title"
-                    value={note.title}
-                    placeholder="Enter Title.."
-                    onChange={handleChange}
-                />
-                <textarea
-                    style={{resize: "none", height: 300}}
-                    name="text"
-                    value={note.text}
-                    placeholder="Enter your text here.."
-                    onChange={handleChange}
-                />
-                <button>Save</button>
-            </form>
 
-            {/*TODO: Change the design of the View notes button*/}
-            <Link to="/allNotes">
-                <button>View Notes</button>
-            </Link>
+            {/*TODO: Change the layout and design of the submission form */}
+            <div className="form-container">
+                <h1>Create new Note</h1>
+
+                <form className="form" onSubmit={handleSubmit}>
+                    <label htmlFor="title" style={labelStyle}>Title</label>
+                    <input
+                        id="title"
+                        type="text"
+                        name="title"
+                        value={note.title}
+                        placeholder="Enter Title.."
+                        onChange={handleChange}
+                    />
+
+                    <label htmlFor="text" style={labelStyle}>Note</label>
+                    <textarea
+                        style={{resize: "none", height: 260}}
+                        name="text"
+                        id="text"
+                        value={note.text}
+                        placeholder="Write your note here.."
+                        onChange={handleChange}
+                    />
+                    <button><BsIcons.BsPencil size="20px"/>Save Note</button>
+                </form>
+            </div>
         </div>
     );
 }
