@@ -14,11 +14,11 @@ function SideBar() {
     };
 
     return (
-        <IconContext.Provider value={{color: "#293441"}}>
+        <IconContext.Provider value={{color: "#9268d1", size: "22px"}}>
             <div className='navbar'>
                 <Link to="#" className="menu-bars">
                     {/*Triggers the side bar to open*/}
-                    <GoIcons.GoThreeBars onClick={toggleSideBar}/>
+                    <GoIcons.GoThreeBars onClick={toggleSideBar} size="29px"/>
                 </Link>
             </div>
             <nav className={sidebarActive ? "nav-menu active" : "nav-menu"}>
@@ -26,7 +26,7 @@ function SideBar() {
                     <li className="navbar-toggle">
                         {/*X button*/}
                         <Link to="#" className="menu-exit">
-                            <GrIcons.GrFormClose onClick={toggleSideBar}/>
+                            <GrIcons.GrFormClose onClick={toggleSideBar} size="29px"/>
                         </Link>
                     </li>
 
