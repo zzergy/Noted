@@ -24,17 +24,21 @@ function NewNote() {
     //Get the notes data from the context by destructuring
     const {addToNotesData} = useContext(NoteContext);
 
-
-    //TODO: If there is no text don't submit the form
     //Submit the form
     function handleSubmit(event) {
         //Prevents the page from reloading
         event.preventDefault();
 
-        //Sets the new note
-        addToNotesData(note);
+        if (note.title === "" || note.text === "") {
+            //Check if the form is empty
+            alert("Please fill the form before submitting")
+        } else {
+            //Sets the new note
+            addToNotesData(note);
+        }
 
-        //TODO: Clear the form after submission.
+        //Clear the form after submission.
+        setNote({text: "", title: ""});
     }
 
     /*Explanation
@@ -57,7 +61,6 @@ function NewNote() {
         <div style={mainContainerStyle}>
             <SideBar/>
 
-            {/*TODO: Change the layout and design of the submission form */}
             <div className="form-container">
                 <h1>Create a new Note</h1>
 
