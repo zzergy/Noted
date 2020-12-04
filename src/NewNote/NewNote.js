@@ -53,7 +53,6 @@ function NewNote() {
         })
     }
 
-
     return (
         <div style={mainContainerStyle}>
             <SideBar/>
