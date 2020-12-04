@@ -20,6 +20,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    transition-duration: 200ms;
 }
 
 .title {
@@ -46,3 +48,31 @@
     border: 2px solid #5293FB;
     color: #ffffff;
 }
+
+/*------------ Home page fade in transition ------------*/
+.title-card {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+/*--------------------------------------------*/
