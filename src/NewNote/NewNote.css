@@ -60,7 +60,7 @@ h1 {
     transition-duration: 460ms;
 }
 
-button:hover {
+.submit-button:hover {
     background-color: #ac75ff;
     transition-duration: 460ms;
 }

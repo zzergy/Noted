@@ -1,8 +1,7 @@
 import React, {useState, useContext} from "react";
 import "./NewNote.css"
-import {Link} from "react-router-dom";
 import {NoteContext} from "../App";
-import SideBar from "../components/BurgerMenu/SideBar";
+import SideBar from "../components/SideBar/SideBar";
 import * as BsIcons from "react-icons/bs"
 import Footer from "../components/Footer/Footer";
 
@@ -61,7 +60,6 @@ function NewNote() {
 
             {/*TODO: Change the layout and design of the submission form */}
             <div className="form-container">
-                <div className="background"></div>
                 <h1>Create new Note</h1>
 
                 <form className="form" onSubmit={handleSubmit}>
@@ -93,4 +91,4 @@ function NewNote() {
     );
 }
 
-export default NewNote
+export default NewNote;
