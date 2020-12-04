@@ -59,13 +59,13 @@
     align-items: center;
     padding: 0 16px;
     border: 4px;
-    transition-duration: 450ms;
+    transition-duration: 400ms;
 
 }
 
 .nav-text a:hover {
     background-color: rgba(81, 148, 253, 0.19);
-    transition-duration: 350ms;
+    transition-duration: 360ms;
     border-radius: 5px;
 }
 
