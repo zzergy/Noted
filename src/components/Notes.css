@@ -1,0 +1,89 @@
+.wrapper {
+
+}
+
+.background {
+    background-image: url("/img/2.jpg");
+    background-size: cover;
+    filter: blur(4px);
+    height: 100vh;
+}
+
+.sidebar-container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+.all-notes {
+    margin-top: 50px;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 68vh;
+    width: 40vw;
+    padding: 20px;
+    border: solid 1px #5293FB;
+    background-color: white;
+}
+
+.all-notes-title {
+    position: absolute;
+    top: 9vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 30px;
+
+}
+
+.note-item {
+    padding: 16px;
+    border-bottom: solid 2px #5293FB;
+    transition-duration: 350ms;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: #294b80;
+}
+
+.note-item:hover {
+    background-color: rgba(81, 148, 253, 0.19);
+    transition-duration: 350ms;
+}
+
+.note-item-view-button {
+    background-color: #5293FB;
+    padding:6px 10px 6px 10px;
+
+    border: none;
+    border-radius: 3px;
+
+    color: white;
+    transition-duration: 460ms;
+}
+
+.note-item-view-button:hover {
+    background-color: #ac75ff;
+    transition-duration: 460ms;
+}
+
+/*---------------- Custom Scrollbar for Chrome and Edge ----------------*/
+.all-notes::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+}
+.all-notes::-webkit-scrollbar-track {
+    background: white;        /* color of the tracking area */
+}
+.all-notes::-webkit-scrollbar-thumb {
+    background-color: #5293FB;    /* color of the scroll thumb */
+    /*border-radius: 5px;       !* roundness of the scroll thumb *!*/
+    /*border: 3px solid orange;  !* creates padding around scroll thumb *!*/
+}
+
+/*---------------- Custom Scrollbar for FireFox ----------------*/
+.all-notes {
+    scrollbar-width: thin;          /* "auto" or "thin"  */
+    scrollbar-color: #5293FB white;   /* scroll thumb & track */
+}
