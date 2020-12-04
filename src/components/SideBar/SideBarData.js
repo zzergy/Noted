@@ -1,6 +1,8 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai"
 import * as FaIcons from "react-icons/fa"
+import * as BiIcon from "react-icons/bi"
+
 export const SideBarData = [
     {
         name: "Home",
@@ -9,9 +11,15 @@ export const SideBarData = [
         styleClass: "nav-text"
     },
     {
-        name: "Tutorial",
-        path: "/tutorial",
-        icon: <AiIcons.AiFillQuestionCircle/>,
+        name: "New Note",
+        path: "/newNote",
+        icon: <FaIcons.FaRegStickyNote/>,
+        styleClass: "nav-text"
+    },
+    {
+        name: "View all Notes",
+        path: "/allNotes",
+        icon: <BiIcon.BiNotepad/>,
         styleClass: "nav-text"
     },
     {
@@ -21,9 +29,9 @@ export const SideBarData = [
         styleClass: "nav-text"
     },
     {
-        name: "View all Notes",
-        path: "/allNotes",
-        icon: <FaIcons.FaRegStickyNote/>,
+        name: "Tutorial",
+        path: "/tutorial",
+        icon: <AiIcons.AiFillQuestionCircle/>,
         styleClass: "nav-text"
-    }
+    },
 ];
