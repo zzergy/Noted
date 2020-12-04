@@ -1,0 +1,17 @@
+.main-container {
+    height: 100vh;
+    background-image: url("/img/1.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about-container {
+    color: #294b80;
+    font-size: large;
+    text-wrap: normal;
+    width: 50vw;
+    margin-top: 40vh;
+    margin-left: calc(50% - 25vw);
+    text-align: center;
+}
