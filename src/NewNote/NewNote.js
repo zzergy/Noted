@@ -59,7 +59,7 @@ function NewNote() {
 
             {/*TODO: Change the layout and design of the submission form */}
             <div className="form-container">
-                <h1>Create new Note</h1>
+                <h1>Create a new Note</h1>
 
                 <form className="form" onSubmit={handleSubmit}>
                     <label htmlFor="title" style={labelStyle}>Title</label>
