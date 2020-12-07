@@ -31,7 +31,6 @@ function Notes() {
                 }
             </div>
 
-            <Footer/>
         </div>
     );
 }

@@ -5,6 +5,10 @@ import NewNote from "./NewNote/NewNote";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Notes from "./components/Notes";
 import About from "./components/AboutPage/About"
+import SideBar from "./components/SideBar/SideBar";
+import Footer from "./components/Footer/Footer";
+
+
 //Create context with 2 values: allNotes that is an array and addToNotesData that is a function
 //This states what the context will want, you have to provide the values
 export const NoteContext = React.createContext({
@@ -41,6 +45,7 @@ function App() {
                     <Route path="/allNotes" component={Notes}/>
                 </Switch>
             </Router>
+            <Footer/>
         </NoteContext.Provider>
     );
 }

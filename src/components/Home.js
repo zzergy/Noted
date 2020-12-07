@@ -13,7 +13,6 @@ function Home() {
                 </Link>
                 <Link style={{color: "#4073c4", marginTop: 25, textDecoration: "underline"}} to="/allNotes">Already a user? View your notes here!</Link>
             </div>
-            <Footer/>
         </div>
     )
 }

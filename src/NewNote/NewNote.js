@@ -88,7 +88,6 @@ function NewNote() {
                 </form>
             </div>
 
-            <Footer/>
         </div>
     );
 }
