@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../Footer/Footer";
 import SideBar from "../SideBar/SideBar"
 import "./About.css"
 function About () {

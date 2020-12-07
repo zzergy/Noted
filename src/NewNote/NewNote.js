@@ -2,7 +2,6 @@ import React, {useState, useContext} from "react";
 import "./NewNote.css"
 import SideBar from "../components/SideBar/SideBar";
 import * as BsIcons from "react-icons/bs"
-import Footer from "../components/Footer/Footer";
 import {NoteContext} from "../context/NotesContextProvider";
 
 const mainContainerStyle = {

@@ -2,7 +2,6 @@ import React, {useContext} from "react";
 import "./AllNotes.css"
 import {NoteContext} from "../../context/NotesContextProvider";
 import SideBar from "../SideBar/SideBar";
-import Footer from "../Footer/Footer";
 
 function Notes() {
     const {allNotes, deleteNote, clearAllNotes} = useContext(NoteContext);
