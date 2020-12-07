@@ -6,6 +6,8 @@ import {SideBarData} from "./SideBarData";
 import "./SideBar.css"
 import {IconContext} from "react-icons";
 import Logo from "../Logo.js"
+
+
 function SideBar() {
     const [sidebarActive, setSideBarActive] = useState(false);
 
