@@ -8,7 +8,7 @@ function Notes() {
     const {allNotes} = useContext(NoteContext);
 
     return (
-        <div className="wrapper">
+        <>
             <div className="background"/>
             <div className="sidebar-container">
                 <SideBar/>
@@ -16,7 +16,10 @@ function Notes() {
 
             <h1 className="all-notes-title">Your notes</h1>
 
-            <div className="all-notes">
+
+            <button className="delete-all-button note-item-buttons note-item-delete-button">Delete All</button>
+
+            <div className="all-notes-container">
 
                 {/*Displays the saved notes*/}
                 {
@@ -24,14 +27,18 @@ function Notes() {
                         (item, index) => (
                             <div key={index} className="note-item">
                                 Title: {item.title}
-                                <button className="note-item-view-button">View Note</button>
+                                <div>
+                                    <button className="note-item-view-button note-item-buttons"
+                                            style={{marginRight: 10}}>View
+                                    </button>
+                                    <button className="note-item-delete-button note-item-buttons">Delete</button>
+                                </div>
                             </div>
                         )
                     )
                 }
             </div>
-
-        </div>
+        </>
     );
 }
 

@@ -1,6 +1,4 @@
-.wrapper {
 
-}
 
 .background {
     background-image: url("/img/2.jpg");
@@ -15,11 +13,28 @@
     width: 100vw;
 }
 
-.all-notes {
+.all-notes-title {
+    position: absolute;
+    top: 9vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 25px;
+    border: solid 1px red;
+    padding: 0;
+}
+
+.delete-all-button {
+    position: absolute;
+    top: 19%;
+    right: 433px;
+    z-index: 3;
+}
+
+.all-notes-container {
     margin-top: 50px;
     overflow: auto;
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 68vh;
@@ -29,14 +44,6 @@
     background-color: white;
 }
 
-.all-notes-title {
-    position: absolute;
-    top: 9vh;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    margin-top: 30px;
-
-}
 
 .note-item {
     padding: 16px;
@@ -49,12 +56,11 @@
 }
 
 .note-item:hover {
-    background-color: rgba(81, 148, 253, 0.19);
+    background-color: rgba(81, 148, 253, 0.1);
     transition-duration: 350ms;
 }
 
-.note-item-view-button {
-    background-color: #5293FB;
+.note-item-buttons {
     padding:6px 10px 6px 10px;
 
     border: none;
@@ -64,26 +70,40 @@
     transition-duration: 460ms;
 }
 
-.note-item-view-button:hover {
-    background-color: #ac75ff;
-    transition-duration: 460ms;
+.note-item-view-button {
+    background-color: #5293FB;
 }
 
+.note-item-view-button:hover {
+    background-color: #1379fb;
+    transition-duration: 360ms;
+}
+
+.note-item-delete-button {
+    background-color: #f86063;
+}
+
+.note-item-delete-button:hover {
+    background-color: #f82229;
+    transition-duration: 360ms;
+}
+
+
 /*---------------- Custom Scrollbar for Chrome and Edge ----------------*/
-.all-notes::-webkit-scrollbar {
+.all-notes-container::-webkit-scrollbar {
     width: 7px;               /* width of the entire scrollbar */
 }
-.all-notes::-webkit-scrollbar-track {
+.all-notes-container::-webkit-scrollbar-track {
     background: white;        /* color of the tracking area */
 }
-.all-notes::-webkit-scrollbar-thumb {
+.all-notes-container::-webkit-scrollbar-thumb {
     background-color: #5293FB;    /* color of the scroll thumb */
     /*border-radius: 5px;       !* roundness of the scroll thumb *!*/
     /*border: 3px solid orange;  !* creates padding around scroll thumb *!*/
 }
 
 /*---------------- Custom Scrollbar for FireFox ----------------*/
-.all-notes {
+.all-notes-container {
     scrollbar-width: thin;          /* "auto" or "thin"  */
     scrollbar-color: #5293FB white;   /* scroll thumb & track */
 }
