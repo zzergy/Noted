@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.css';
 import Home from "./components/Home";
 import NewNote from "./NewNote/NewNote";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Notes from "./components/AllNotes/AllNotes";
 import About from "./components/AboutPage/About"
-import SideBar from "./components/SideBar/SideBar";
 import Footer from "./components/Footer/Footer";
 import NotesContextProvider from "./context/NotesContextProvider";
 
