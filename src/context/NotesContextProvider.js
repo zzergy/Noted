@@ -40,8 +40,9 @@ function NotesContextProvider(props) {
         Update the local storage
     */
     const addToNotesData = (newNote) => {
-        setAllNotes([...allNotes, newNote]);
-        const notesDataJson = JSON.stringify(allNotes);
+        const newNotes = [...allNotes, newNote];
+        setAllNotes(newNotes);
+        const notesDataJson = JSON.stringify(newNotes);
         localStorage.setItem('notesData', notesDataJson);
     };
 
