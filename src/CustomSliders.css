@@ -1,0 +1,21 @@
+/*---------------- Custom Scrollbar for Chrome and Edge ----------------*/
+.custom-slider::-webkit-scrollbar {
+    width: 7px; /* width of the entire scrollbar */
+}
+
+.custom-slider::-webkit-scrollbar-track {
+    background: white; /* color of the tracking area */
+}
+
+.custom-slider::-webkit-scrollbar-thumb {
+    background-color: #5293FB; /* color of the scroll thumb */
+    /*border-radius: 5px;       !* roundness of the scroll thumb *!*/
+    /*border: 3px solid orange;  !* creates padding around scroll thumb *!*/
+}
+
+/*---------------- Custom Scrollbar for FireFox ----------------*/
+.custom-slider {
+    scrollbar-width: thin; /* "auto" or "thin"  */
+    scrollbar-color: #5293FB white;
+    border: none; /* scroll thumb & track */
+}
