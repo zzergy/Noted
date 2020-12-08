@@ -1,0 +1,37 @@
+.pop-up-container.active {
+    /*How to center div with position fixed*/
+    /*
+        - set your desired height
+        - center the div's TOP LEFT corner (top: 50%, left: 50%)
+        - for the margins calculate the NEGATIVE half in px
+     */
+    position: fixed;
+    height: 350px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -250px;
+
+    box-shadow: 0px 0px 10px 0px rgba(94, 52, 153, 0.81);
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.exit-button {
+    align-self: flex-end;
+}
+
+.note {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.hidden {
+    display: none;
+}

@@ -109,24 +109,3 @@
 /*}*/
 
 
-/*---------------- Custom Scrollbar for Chrome and Edge ----------------*/
-.all-notes-container::-webkit-scrollbar {
-    width: 7px; /* width of the entire scrollbar */
-}
-
-.all-notes-container::-webkit-scrollbar-track {
-    background: white; /* color of the tracking area */
-}
-
-.all-notes-container::-webkit-scrollbar-thumb {
-    background-color: #5293FB; /* color of the scroll thumb */
-    /*border-radius: 5px;       !* roundness of the scroll thumb *!*/
-    /*border: 3px solid orange;  !* creates padding around scroll thumb *!*/
-}
-
-/*---------------- Custom Scrollbar for FireFox ----------------*/
-.all-notes-container {
-    scrollbar-width: thin; /* "auto" or "thin"  */
-    scrollbar-color: #5293FB white;
-    border: none; /* scroll thumb & track */
-}
