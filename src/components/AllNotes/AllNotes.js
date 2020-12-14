@@ -4,18 +4,38 @@ import {NoteContext} from "../../context/NotesContextProvider";
 import SideBar from "../SideBar/SideBar";
 import ViewNotePopUp from "../ViewNotePopUp/ViewNotePopUp";
 import "../../CustomSliders.css"
+import {useSnackbar} from "notistack";
 
 function Notes() {
     const {allNotes, deleteNote, clearAllNotes} = useContext(NoteContext);
     const [selectedNote, setSelectedNote] = useState({noteTitle: "", noteText: ""});
     const [popUpActive, setPopUpActive] = useState(false);
+    const {enqueueSnackbar, closeSnackbar} = useSnackbar();
+
+    const action = key => (
+        <>
+            <button onClick={() => { clearAllNotes(); closeSnackbar(key) }}>
+                Yes
+            </button>
+            <button onClick={() => { closeSnackbar(key) }}>
+                No
+            </button>
+        </>
+    );
 
     function handleDelete(item) {
         deleteNote(item);
     }
 
     function handleClearAllNotes() {
-        clearAllNotes();
+        enqueueSnackbar(
+            'Proceed to delete all notes? ',
+            {
+                variant: "error",
+                preventDuplicate: true,
+                persist: true,
+                action
+            });
     }
 
     function clearPopUpActive() {
