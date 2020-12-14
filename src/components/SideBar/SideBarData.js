@@ -27,11 +27,5 @@ export const SideBarData = [
         path: "/about",
         icon: <AiIcons.AiFillInfoCircle/>,
         styleClass: "nav-text"
-    },
-    {
-        name: "Tutorial",
-        path: "/tutorial",
-        icon: <AiIcons.AiFillQuestionCircle/>,
-        styleClass: "nav-text"
-    },
+    }
 ];
