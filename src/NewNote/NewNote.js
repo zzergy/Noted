@@ -36,7 +36,7 @@ function NewNote() {
                 'Please fill all of the fields before submitting!',
                 {
                     variant: "info",
-                    preventDuplicate: true,
+                    preventDuplicate: true
                 })
         } else {
             //Sets the new note
@@ -45,7 +45,6 @@ function NewNote() {
                 'Note saved !',
                 {
                     variant: "success",
-                    preventDuplicate: true,
                 })
         }
 
