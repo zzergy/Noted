@@ -13,7 +13,7 @@ function Notes() {
     const [popUpActive, setPopUpActive] = useState(false);
     const {enqueueSnackbar, closeSnackbar} = useSnackbar();
 
-    const snackbarAction = key => (
+    const action = key => (
         <>
             <button className="snackbar-button" onClick={() => {
                 clearAllNotes();
@@ -40,7 +40,7 @@ function Notes() {
                 variant: "error",
                 preventDuplicate: true,
                 persist: true,
-                snackbarAction
+                action
             });
     }
 
