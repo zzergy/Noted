@@ -93,8 +93,8 @@ function Notes() {
                     {/*Displays the saved notes*/}
                     {allNotes.length === 0 ? noNotesMessage : renderAllNotes}
                 </div>
-                <button onClick={handleClearAllNotes} className="clear-all-button">Delete All Notes</button>
-                {/*{selectedNote !== undefined && <ViewNotePopUp note={selectedNote}/>}*/}
+                {allNotes.length !== 0 &&
+                <button onClick={handleClearAllNotes} className="clear-all-button">Delete All Notes</button>}
 
                 {popUpActive && <ViewNotePopUp note={selectedNote} popUpActive={popUpActive} clear={clearPopUpActive}/>}
             </div>
