@@ -15,10 +15,15 @@ function Notes() {
 
     const action = key => (
         <>
-            <button onClick={() => { clearAllNotes(); closeSnackbar(key) }}>
+            <button onClick={() => {
+                clearAllNotes();
+                closeSnackbar(key)
+            }}>
                 Yes
             </button>
-            <button onClick={() => { closeSnackbar(key) }}>
+            <button onClick={() => {
+                closeSnackbar(key)
+            }}>
                 No
             </button>
         </>
@@ -74,7 +79,8 @@ function Notes() {
     const noNotesMessage = (
         <div className="message-container">
             <span>Sorry you haven't created any notes yet.</span>
-            <Link to="/newNote" style={{textDecoration: "underline #3b69b4", color: "#3b69b4"}}>Create a note here.</Link>
+            <Link to="/newNote" style={{textDecoration: "underline #3b69b4", color: "#3b69b4"}}>Create a note
+                here.</Link>
         </div>
     );
 
