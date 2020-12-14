@@ -3,7 +3,7 @@ import "./NewNote.css"
 import SideBar from "../components/SideBar/SideBar";
 import * as BsIcons from "react-icons/bs"
 import {NoteContext} from "../context/NotesContextProvider";
-import {SnackbarProvider, useSnackbar} from 'notistack';
+import {useSnackbar} from 'notistack';
 
 const mainContainerStyle = {
     display: "flex",
