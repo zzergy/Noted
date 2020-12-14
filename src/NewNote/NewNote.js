@@ -3,6 +3,7 @@ import "./NewNote.css"
 import SideBar from "../components/SideBar/SideBar";
 import * as BsIcons from "react-icons/bs"
 import {NoteContext} from "../context/NotesContextProvider";
+import {SnackbarProvider, useSnackbar} from 'notistack';
 
 const mainContainerStyle = {
     display: "flex",
@@ -19,6 +20,7 @@ const labelStyle = {
 
 function NewNote() {
     const [note, setNote] = useState({title: "", text: ""});
+    const {enqueueSnackbar, closeSnackbar} = useSnackbar();
 
     //Get the notes data from the context by destructuring
     const {addToNotesData} = useContext(NoteContext);
@@ -30,10 +32,21 @@ function NewNote() {
 
         if (note.title === "" || note.text === "") {
             //Check if the form is empty
-            alert("Please fill the form before submitting")
+            enqueueSnackbar(
+                'Please fill all of the fields before submitting!',
+                {
+                    variant: "info",
+                    preventDuplicate: true,
+                })
         } else {
             //Sets the new note
             addToNotesData(note);
+            enqueueSnackbar(
+                'Note saved !',
+                {
+                    variant: "success",
+                    preventDuplicate: true,
+                })
         }
 
         //Clear the form after submission.
@@ -86,7 +99,6 @@ function NewNote() {
                     <button className="submit-button"><BsIcons.BsPencil size="20px"/>Save Note</button>
                 </form>
             </div>
-
         </div>
     );
 }

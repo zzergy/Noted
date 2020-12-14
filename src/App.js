@@ -7,12 +7,13 @@ import Notes from "./components/AllNotes/AllNotes";
 import About from "./components/AboutPage/About"
 import Footer from "./components/Footer/Footer";
 import NotesContextProvider from "./context/NotesContextProvider";
+import {SnackbarProvider} from "notistack";
 
 
 
 function App() {
-
     return (
+        <SnackbarProvider maxSnack={3}>
             <NotesContextProvider>
                 <Router>
                     <Switch>
@@ -24,6 +25,7 @@ function App() {
                 </Router>
                 <Footer/>
             </NotesContextProvider>
+        </SnackbarProvider>
     );
 }
 
