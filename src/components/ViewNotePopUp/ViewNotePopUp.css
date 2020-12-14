@@ -13,6 +13,7 @@
     margin-top: -125px;
     margin-left: -250px;
 
+    border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(94, 52, 153, 0.81);
     background-color: white;
     padding: 10px;
@@ -20,8 +21,14 @@
     flex-direction: column;
 }
 
-.exit-button {
+.exit-button-container {
     align-self: flex-end;
+}
+
+.exit-button {
+    border: none;
+    background-color: transparent;
+    height: 27px;
 }
 
 .note {
