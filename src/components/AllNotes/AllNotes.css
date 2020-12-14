@@ -1,58 +1,45 @@
-/*.background {*/
-/*    background-image: url("/img/1.jpg");*/
-
-/*    filter: blur(4px);*/
-/*    height: 100vh;*/
-/*}*/
-.snackbar-button {
-    border: none;
-    background-color: transparent;
-    color: #64090b;
-    font-weight: bold;
-    font-size: 15px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.test {
+.background {
     background-image: url("/img/1-blurred.jpg");
     background-size: cover;
     height: 100vh;
 }
 
-.wrapper {
+.foreground-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/*-------------------- Title --------------------*/
 .notes-title {
     margin: 25px;
     padding: 0;
 }
 
-.clear-all-button {
-    padding: 7px 12px 7px 12px;
-    border: 2px solid #f86063;
+.all-notes-container {
+    overflow: auto;
+    height: 68vh;
+    width: 40vw;
+    padding: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(94, 52, 153, 0.75);
     background-color: white;
-    border-radius: 3px;
-    color: #f86063;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 35px;
-    transition-duration: 360ms;
 }
 
-.clear-all-button:hover {
-    background-color: #f82229;
-    border: solid 2px #f82229;
-    transition-duration: 360ms;
-    color: white;
-    font-weight: bold;
+.note-item {
+    padding: 16px;
+    border-bottom: solid 2px #5293FB;
+    transition-duration: 350ms;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: #294b80;
 }
 
-.option-buttons {
+.note-item:hover {
+    background-color: rgba(81, 148, 253, 0.1);
+    transition-duration: 350ms;
+}
+
+.note-item-option-buttons {
     padding: 6px 10px 6px 10px;
     border: none;
     border-radius: 3px;
@@ -81,16 +68,27 @@
 
 }
 
-
-.all-notes-container {
-    overflow: auto;
-    height: 68vh;
-    width: 40vw;
-    padding: 20px;
-    box-shadow: 0px 5px 5px 0px rgba(94, 52, 153, 0.75);
+.delete-all-button {
+    padding: 7px 12px 7px 12px;
+    border: 2px solid #f86063;
     background-color: white;
+    border-radius: 3px;
+    color: #f86063;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 35px;
+    transition-duration: 360ms;
 }
 
+.delete-all-button:hover {
+    background-color: #f82229;
+    border: solid 2px #f82229;
+    transition-duration: 360ms;
+    color: white;
+    font-weight: bold;
+}
+
+/*----------------------- Displays a message when there are no notes -----------------------*/
 .message-container {
     height: 100%;
     display: flex;
@@ -107,31 +105,13 @@
     /*font-weight: bold;*/
 }
 
-.note-item {
-    padding: 16px;
-    border-bottom: solid 2px #5293FB;
-    transition-duration: 350ms;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    color: #294b80;
+.snackbar-button {
+    border: none;
+    background-color: transparent;
+    color: #64090b;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 10px;
+    cursor: pointer;
 }
-
-.note-item:hover {
-    background-color: rgba(81, 148, 253, 0.1);
-    transition-duration: 350ms;
-}
-
-
-/*.note-item-view-button:hover {*/
-/*    transition-duration: 360ms;*/
-/*}*/
-
-/*.note-item-delete-button {*/
-/*}*/
-
-/*.note-item-delete-button:hover {*/
-/*    transition-duration: 360ms;*/
-/*}*/
-
 

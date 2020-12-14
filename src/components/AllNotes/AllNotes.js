@@ -33,7 +33,7 @@ function Notes() {
         deleteNote(item);
     }
 
-    function handleClearAllNotes() {
+    function handleDeleteAllNotes() {
         enqueueSnackbar(
             'Proceed to delete all notes ?',
             {
@@ -60,13 +60,13 @@ function Notes() {
                     Title: {item.title}
                     <section>
                         <button
-                            className="option-buttons view-button"
+                            className="note-item-option-buttons view-button"
                             onClick={() => handleViewNote(item)}
                         >View
                         </button>
 
                         <button
-                            className="option-buttons delete-button"
+                            className="note-item-option-buttons delete-button"
                             onClick={() => handleDelete(item)}
                         >Delete
                         </button>
@@ -85,16 +85,16 @@ function Notes() {
     );
 
     return (
-        <div className="test">
+        <div className="background">
             <SideBar/>
-            <div className="wrapper">
+            <div className="foreground-container">
                 <h1 className="notes-title">Your notes</h1>
                 <div className="all-notes-container custom-slider">
                     {/*Displays the saved notes*/}
                     {allNotes.length === 0 ? noNotesMessage : renderAllNotes}
                 </div>
                 {allNotes.length !== 0 &&
-                <button onClick={handleClearAllNotes} className="clear-all-button">Delete All Notes</button>}
+                <button onClick={handleDeleteAllNotes} className="delete-all-button">Delete All Notes</button>}
 
                 {popUpActive && <ViewNotePopUp note={selectedNote} popUpActive={popUpActive} clear={clearPopUpActive}/>}
             </div>
