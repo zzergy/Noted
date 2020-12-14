@@ -4,7 +4,7 @@ I have created a simple site for taking notes.
 My Goals with this project are to improve my coding skills using **React**.
 
 ## How to start the Application 
-yarn start
+Run in the terminal `yarn start`
 
 ## Some features
 ### Creating a note
