@@ -5,6 +5,7 @@ import SideBar from "../SideBar/SideBar";
 import ViewNotePopUp from "../ViewNotePopUp/ViewNotePopUp";
 import "../../CustomSliders.css"
 import {useSnackbar} from "notistack";
+import {Link} from "react-router-dom";
 
 function Notes() {
     const {allNotes, deleteNote, clearAllNotes} = useContext(NoteContext);
@@ -70,6 +71,13 @@ function Notes() {
         )
     );
 
+    const noNotesMessage = (
+        <div className="message-container">
+            <span>Sorry you haven't created any notes yet.</span>
+            <Link to="/newNote" style={{textDecoration: "underline #3b69b4", color: "#3b69b4"}}>Create a note here.</Link>
+        </div>
+    );
+
     return (
         <div className="test">
             <SideBar/>
@@ -77,7 +85,7 @@ function Notes() {
                 <h1 className="notes-title">Your notes</h1>
                 <div className="all-notes-container custom-slider">
                     {/*Displays the saved notes*/}
-                    {allNotes.length === 0 ? <span>Sorry you haven't created any notes yet.</span> : renderAllNotes}
+                    {allNotes.length === 0 ? noNotesMessage : renderAllNotes}
                 </div>
                 <button onClick={handleClearAllNotes} className="clear-all-button">Delete All Notes</button>
                 {/*{selectedNote !== undefined && <ViewNotePopUp note={selectedNote}/>}*/}

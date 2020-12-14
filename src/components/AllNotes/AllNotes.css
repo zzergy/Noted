@@ -81,6 +81,22 @@
     background-color: white;
 }
 
+.message-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.message-container > span {
+    font-size: 18px;
+    color: #5293FB;
+    margin-bottom: 10px;
+    /*font-weight: bold;*/
+}
+
 .note-item {
     padding: 16px;
     border-bottom: solid 2px #5293FB;
