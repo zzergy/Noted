@@ -4,6 +4,16 @@
 /*    filter: blur(4px);*/
 /*    height: 100vh;*/
 /*}*/
+.snackbar-button {
+    border: none;
+    background-color: transparent;
+    color: #64090b;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .test {
     background-image: url("/img/1-blurred.jpg");
     background-size: cover;

@@ -15,16 +15,16 @@ function Notes() {
 
     const action = key => (
         <>
-            <button onClick={() => {
+            <button className="snackbar-button" onClick={() => {
                 clearAllNotes();
                 closeSnackbar(key)
             }}>
-                Yes
+                YES
             </button>
-            <button onClick={() => {
+            <button className="snackbar-button" onClick={() => {
                 closeSnackbar(key)
             }}>
-                No
+                NO
             </button>
         </>
     );
@@ -35,7 +35,7 @@ function Notes() {
 
     function handleClearAllNotes() {
         enqueueSnackbar(
-            'Proceed to delete all notes? ',
+            'Proceed to delete all notes ?',
             {
                 variant: "error",
                 preventDuplicate: true,
