@@ -6,3 +6,11 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
+input, textarea, button:focus {
+    outline: none;
+}
