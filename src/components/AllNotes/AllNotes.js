@@ -15,7 +15,6 @@ function Notes() {
     const {enqueueSnackbar, closeSnackbar} = useSnackbar();
 
 
-
     function handleDelete(item) {
         const action = key => (
             <>
@@ -117,14 +116,33 @@ function Notes() {
             <SideBar/>
             <div className="foreground-container">
                 <h1 className="notes-title">Your notes</h1>
-                <div className="all-notes-container custom-slider">
-                    {/*Displays the saved notes*/}
-                    {allNotes.length === 0 ? noNotesMessage : renderAllNotes}
-                </div>
-                {allNotes.length !== 0 &&
-                <button onClick={handleDeleteAllNotes} className="delete-all-button">Delete All Notes</button>}
 
-                {popUpActive && <ViewNotePopUp note={selectedNote} popUpActive={popUpActive} clear={clearPopUpActive}/>}
+                <div className="wrapper custom-slider">
+                    <div className="filter-and-delete-container">
+                        <input type="text" placeholder="Search.." className="search-bar"/>
+                        {
+                            allNotes.length !== 0 &&
+                            <button
+                                onClick={handleDeleteAllNotes}
+                                className="delete-all-button">
+                                Delete All Notes
+                            </button>
+                        }
+                    </div>
+
+                    <div className="all-notes-container">
+                        {/*Displays the saved notes*/}
+                        {allNotes.length === 0 ? noNotesMessage : renderAllNotes}
+                    </div>
+                    {
+                        popUpActive &&
+                        <ViewNotePopUp
+                            note={selectedNote}
+                            popUpActive={popUpActive}
+                            clear={clearPopUpActive}
+                        />
+                    }
+                </div>
             </div>
         </div>
     );
