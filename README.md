@@ -23,5 +23,5 @@ Here the user can view all of the notes, delete or view them. There is also an o
 
 ## Used Technologies and Libraries 
 ### `React` `JavaScript` `HTML5` `CSS3`  
-### `React Router` `React Icons` `Notistack`
+### `React Router` `React Icons` `Notistack` `Material UI`
 
