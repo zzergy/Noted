@@ -6,6 +6,7 @@ import ViewNotePopUp from "../ViewNotePopUp/ViewNotePopUp";
 import "../../CustomSliders.css"
 import {useSnackbar} from "notistack";
 import {Link} from "react-router-dom";
+import Button from '@material-ui/core/Button';
 
 function Notes() {
     const {allNotes, deleteNote, clearAllNotes} = useContext(NoteContext);
@@ -13,27 +14,54 @@ function Notes() {
     const [popUpActive, setPopUpActive] = useState(false);
     const {enqueueSnackbar, closeSnackbar} = useSnackbar();
 
-    const action = key => (
-        <>
-            <button className="snackbar-button" onClick={() => {
-                clearAllNotes();
-                closeSnackbar(key)
-            }}>
-                YES
-            </button>
-            <button className="snackbar-button" onClick={() => {
-                closeSnackbar(key)
-            }}>
-                NO
-            </button>
-        </>
-    );
+
 
     function handleDelete(item) {
-        deleteNote(item);
+        const action = key => (
+            <>
+                <Button color="secondary" size="small" onClick={() => {
+                    deleteNote(item);
+                    closeSnackbar(key);
+                }}>
+                    YES
+                </Button>
+                <Button color="secondary" size="small" onClick={() => {
+                    closeSnackbar(key)
+                }}>
+                    NO
+                </Button>
+            </>
+        );
+
+        enqueueSnackbar(
+            'Proceed to delete ?',
+            {
+                variant: "warning",
+                preventDuplicate: true,
+                persist: true,
+                action
+            });
+
+
     }
 
     function handleDeleteAllNotes() {
+        const action = key => (
+            <>
+                <button className="snackbar-button" onClick={() => {
+                    clearAllNotes();
+                    closeSnackbar(key)
+                }}>
+                    YES
+                </button>
+                <button className="snackbar-button" onClick={() => {
+                    closeSnackbar(key)
+                }}>
+                    NO
+                </button>
+            </>
+        );
+
         enqueueSnackbar(
             'Proceed to delete all notes ?',
             {
