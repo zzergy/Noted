@@ -9,11 +9,12 @@ import {Link} from "react-router-dom";
 import Button from '@material-ui/core/Button';
 
 function Notes() {
-    const [allNotes, deleteNote, clearAllNotes] = useContext(NoteContext);
+    const {allNotes, deleteNote, clearAllNotes} = useContext(NoteContext);
+    const {enqueueSnackbar, closeSnackbar} = useSnackbar();
+
     const [selectedNote, setSelectedNote] = useState({noteTitle: "", noteText: ""});
     const [popUpActive, setPopUpActive] = useState(false);
-    const [enqueueSnackbar, closeSnackbar] = useSnackbar();
-
+    const [searchTerm, setSearchTerm] = useState("");
 
     function handleDelete(item) {
         const action = key => (
@@ -80,8 +81,12 @@ function Notes() {
         setSelectedNote({...item, noteTitle: item.title, noteText: item.text})
     }
 
-    let renderAllNotes = (
-        allNotes.map(
+    function renderAllNotes() {
+        let filteredAllNotes = allNotes;
+
+        filteredAllNotes = allNotes.filter(item => (item.title.toLowerCase().includes(searchTerm.toLowerCase())));
+
+        return filteredAllNotes.map(
             (item, index) => (
                 <div key={index} className="note-item">
                     {item.title}
@@ -101,7 +106,7 @@ function Notes() {
                 </div>
             )
         )
-    );
+    }
 
     const noNotesMessage = (
         <div className="message-container">
@@ -122,7 +127,12 @@ function Notes() {
                         {
                             allNotes.length !== 0 &&
                             <>
-                                <input type="text" placeholder="Search.." className="search-bar"/>
+                                <input
+                                    type="text"
+                                    placeholder="Search.."
+                                    className="search-bar"
+                                    onChange={(event) => setSearchTerm(event.target.value)}
+                                />
                                 <button
                                     onClick={handleDeleteAllNotes}
                                     className="delete-all-button">
@@ -135,7 +145,7 @@ function Notes() {
 
                     <div className="all-notes-container">
                         {/*Displays the saved notes*/}
-                        {allNotes.length === 0 ? noNotesMessage : renderAllNotes}
+                        {allNotes.length === 0 ? noNotesMessage : renderAllNotes()}
                     </div>
 
                     {
