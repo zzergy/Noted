@@ -9,10 +9,10 @@ import {Link} from "react-router-dom";
 import Button from '@material-ui/core/Button';
 
 function Notes() {
-    const {allNotes, deleteNote, clearAllNotes} = useContext(NoteContext);
+    const [allNotes, deleteNote, clearAllNotes] = useContext(NoteContext);
     const [selectedNote, setSelectedNote] = useState({noteTitle: "", noteText: ""});
     const [popUpActive, setPopUpActive] = useState(false);
-    const {enqueueSnackbar, closeSnackbar} = useSnackbar();
+    const [enqueueSnackbar, closeSnackbar] = useSnackbar();
 
 
     function handleDelete(item) {
