@@ -47,24 +47,24 @@ function Notes() {
     function handleDeleteAllNotes() {
         const action = key => (
             <>
-                <button className="snackbar-button" onClick={() => {
+                <Button color="secondary" onClick={() => {
                     clearAllNotes();
                     closeSnackbar(key)
                 }}>
                     YES
-                </button>
-                <button className="snackbar-button" onClick={() => {
+                </Button>
+                <Button color="secondary" onClick={() => {
                     closeSnackbar(key)
                 }}>
                     NO
-                </button>
+                </Button>
             </>
         );
 
         enqueueSnackbar(
             'Proceed to delete all notes ?',
             {
-                variant: "error",
+                variant: "warning",
                 preventDuplicate: true,
                 persist: true,
                 action
@@ -119,14 +119,17 @@ function Notes() {
 
                 <div className="wrapper custom-slider">
                     <div className="filter-and-delete-container">
-                        <input type="text" placeholder="Search.." className="search-bar"/>
                         {
                             allNotes.length !== 0 &&
-                            <button
-                                onClick={handleDeleteAllNotes}
-                                className="delete-all-button">
-                                Delete All Notes
-                            </button>
+                            <>
+                                <input type="text" placeholder="Search.." className="search-bar"/>
+                                <button
+                                    onClick={handleDeleteAllNotes}
+                                    className="delete-all-button">
+                                    Delete All Notes
+                                </button>
+                            </>
+
                         }
                     </div>
 
@@ -134,6 +137,7 @@ function Notes() {
                         {/*Displays the saved notes*/}
                         {allNotes.length === 0 ? noNotesMessage : renderAllNotes}
                     </div>
+
                     {
                         popUpActive &&
                         <ViewNotePopUp
