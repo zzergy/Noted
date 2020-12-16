@@ -71,7 +71,7 @@
 /*------------------------ All Notes container ------------------------ */
 .all-notes-container {
     padding: 0px 20px 20px 20px;
-
+height: 100%;
 }
 
 .note-item {
@@ -125,7 +125,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .message-container > span {
