@@ -84,7 +84,7 @@ function Notes() {
         allNotes.map(
             (item, index) => (
                 <div key={index} className="note-item">
-                    Title: {item.title}
+                    {item.title}
                     <section>
                         <button
                             className="note-item-option-buttons view-button"
