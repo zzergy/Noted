@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from "./components/Home";
-import NewNote from "./NewNote/NewNote";
+import NewNote from "./components/NewNote/NewNote";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Notes from "./components/AllNotes/AllNotes";
 import About from "./components/AboutPage/About"

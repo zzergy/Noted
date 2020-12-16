@@ -1,8 +1,8 @@
 import React, {useState, useContext} from "react";
 import "./NewNote.css"
-import SideBar from "../components/SideBar/SideBar";
+import SideBar from "../SideBar/SideBar"
 import * as BsIcons from "react-icons/bs"
-import {NoteContext} from "../context/NotesContextProvider";
+import {NoteContext} from "../../context/NotesContextProvider";
 import {useSnackbar} from 'notistack';
 
 const mainContainerStyle = {
