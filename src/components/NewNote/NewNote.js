@@ -97,7 +97,7 @@ function NewNote() {
                         placeholder="Write your note here.."
                         onChange={handleChange}
                     />
-                    <button className="submit-button"><BsIcons.BsPencil size="20px"/>Save Note</button>
+                    <button className="submit-button"><BsIcons.BsPencil size="18px"/>Save Note</button>
                 </form>
             </div>
         </div>

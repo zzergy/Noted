@@ -3,6 +3,7 @@ import "./ViewNotePopUp.css";
 import "../../CustomSliders.css"
 import * as GrIcons from "react-icons/gr"
 import {NoteContext} from "../../context/NotesContextProvider";
+import * as BsIcons from "react-icons/bs";
 
 function ViewNotePopUp(props) {
     const [editedNote, setEditedNote] = useState({
@@ -33,27 +34,25 @@ function ViewNotePopUp(props) {
                 <button className="exit-button"><GrIcons.GrFormClose onClick={props.clear} size="25px"/></button>
             </div>
 
-            <div className="note custom-slider">
-                <form onSubmit={handleSubmit}>
-                    <input
-                        name="title"
-                        className="title-field"
-                        type="text"
-                        value={editedNote.title}
-                        onChange={handleChange}
-                    />
+            <form onSubmit={handleSubmit} className="note">
+                <input
+                    name="title"
+                    className="title-field"
+                    type="text"
+                    value={editedNote.title}
+                    onChange={handleChange}
+                />
 
-                    <textarea
-                        name="text"
-                        className="text-field"
-                        value={editedNote.text}
-                        cols="100"
-                        rows="100"
-                        onChange={handleChange}
-                    />
-                    <button>Save</button>
-                </form>
-            </div>
+                <textarea
+                    name="text"
+                    className="text-field"
+                    value={editedNote.text}
+                    cols="100"
+                    rows="100"
+                    onChange={handleChange}
+                />
+                <button className="save-changes-button"><BsIcons.BsPencil size="17px"/>Save Changes</button>
+            </form>
         </div>
     );
 }

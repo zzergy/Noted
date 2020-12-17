@@ -147,16 +147,15 @@ function Notes() {
                         {/*Displays the saved notes*/}
                         {allNotes.length === 0 ? noNotesMessage : renderAllNotes()}
                     </div>
-
-                    {
-                        popUpActive &&
-                        <ViewNotePopUp
-                            note={selectedNote}
-                            popUpActive={popUpActive}
-                            clear={clearPopUpActive}
-                        />
-                    }
                 </div>
+                {
+                    popUpActive &&
+                    <ViewNotePopUp
+                        note={selectedNote}
+                        popUpActive={popUpActive}
+                        clear={clearPopUpActive}
+                    />
+                }
             </div>
         </div>
     );
