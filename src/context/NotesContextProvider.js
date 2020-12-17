@@ -7,6 +7,8 @@ export const NoteContext = React.createContext({
     allNotes: [],
     addToNotesData: () => {
     },
+    editNote: () => {
+    },
     deleteNote: () => {
     },
     clearAllNotes: () => {
@@ -46,6 +48,15 @@ function NotesContextProvider(props) {
         localStorage.setItem('notesData', notesDataJson);
     };
 
+//------------------------ Edit Note ------------------------
+    function editNote(note) {
+        const filteredArray = allNotes.filter(item => item.id !== note.id);
+        filteredArray.push(note);
+        setAllNotes(filteredArray);
+        const notesDataJson = JSON.stringify(filteredArray);
+        localStorage.setItem('notesData', notesDataJson);
+    }
+
 //------------------------ Delete Note ------------------------
     /* Explanation
         Set the new state (removes the item from the state)
@@ -82,7 +93,8 @@ function NotesContextProvider(props) {
             allNotes: allNotes,
             addToNotesData: addToNotesData,
             deleteNote: deleteNote,
-            clearAllNotes: clearAllNotes
+            clearAllNotes: clearAllNotes,
+            editNote: editNote
         }}>
             {/*Passes down all of the functions*/}
             {props.children}

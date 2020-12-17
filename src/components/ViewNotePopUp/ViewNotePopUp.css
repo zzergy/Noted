@@ -33,7 +33,7 @@
 }
 
 .note {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -42,4 +42,43 @@
 
 .hidden {
     display: none;
+}
+
+.title-field {
+    /*border: none;*/
+    /*border-bottom: solid 2px #5293FB;*/
+    border: solid 1px red;
+
+    font-size: 20px;
+    padding: 8px 0 8px 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.text-field {
+    /*border-bottom: solid 2px #5293FB;*/
+    /*border: none;*/
+    border: solid 1px red;
+    resize: none;
+    overflow: auto;
+    width: 100%;
+    font-size: 17px;
+    padding: 5px;
+    height: 28vh;
+}
+
+.text-field, .title-field:disabled {
+    background-color: white;
+}
+
+.asd {
+    display: flex;
+    align-items: flex-start;
+}
+
+.edit-button {
+    border: none;
+    background-color: transparent;
+    /*height: 27px;*/
+    cursor: pointer;
 }

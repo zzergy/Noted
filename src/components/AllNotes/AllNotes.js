@@ -12,7 +12,7 @@ function Notes() {
     const {allNotes, deleteNote, clearAllNotes} = useContext(NoteContext);
     const {enqueueSnackbar, closeSnackbar} = useSnackbar();
 
-    const [selectedNote, setSelectedNote] = useState({noteTitle: "", noteText: ""});
+    const [selectedNote, setSelectedNote] = useState({id: "", title: "", text: ""});
     const [popUpActive, setPopUpActive] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -78,17 +78,17 @@ function Notes() {
 
     function handleViewNote(item) {
         setPopUpActive(!popUpActive);
-        setSelectedNote({...item, noteTitle: item.title, noteText: item.text})
+        setSelectedNote({...item, id: item.id, title: item.title, text: item.text})
     }
 
     function renderAllNotes() {
         let filteredAllNotes = allNotes;
 
-        filteredAllNotes = allNotes.filter(item => (item.title.toLowerCase().includes(searchTerm.toLowerCase())));
+        // filteredAllNotes = allNotes.filter(item => (item.title.toLowerCase().includes(searchTerm.toLowerCase())));
 
         return filteredAllNotes.map(
-            (item, index) => (
-                <div key={index} className="note-item">
+            (item) => (
+                <div key={item.id} className="note-item">
                     {item.title}
                     <section>
                         <button

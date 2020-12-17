@@ -4,6 +4,7 @@ import SideBar from "../SideBar/SideBar"
 import * as BsIcons from "react-icons/bs"
 import {NoteContext} from "../../context/NotesContextProvider";
 import {useSnackbar} from 'notistack';
+import {v4 as uuidv4} from 'uuid';
 
 const mainContainerStyle = {
     display: "flex",
@@ -12,18 +13,34 @@ const mainContainerStyle = {
 };
 
 const labelStyle = {
-    marginBottom:" 10px",
+    marginBottom: " 10px",
     fontSize: "18px",
     color: "#5293FB",
     fontWeight: "bold"
 };
 
 function NewNote() {
-    const [note, setNote] = useState({title: "", text: ""});
+    const [note, setNote] = useState({id: "", title: "", text: ""});
     const {enqueueSnackbar, closeSnackbar} = useSnackbar();
 
     //Get the notes data from the context by destructuring
     const {addToNotesData} = useContext(NoteContext);
+
+    /*Explanation
+       The onChange prop of the form has an event prop.
+       Update the fields so that the state is controlling the value
+    */
+    function handleChange(event) {
+        //Get the value and name props that you are going to change
+        const {value, name} = event.target;
+
+        //Set the state
+        setNote({
+            ...note,
+            //The name of the form field has to be the same as the name of the state's values
+            [name]: value
+        })
+    }
 
     //Submit the form
     function handleSubmit(event) {
@@ -45,27 +62,12 @@ function NewNote() {
                 'Note saved !',
                 {
                     variant: "success",
-                })
+                }
+            )
         }
 
         //Clear the form after submission.
-        setNote({text: "", title: ""});
-    }
-
-    /*Explanation
-        The onChange prop of the form has an event prop.
-        Update the fields so that the state is controlling the value
-     */
-    function handleChange(event) {
-        //Get the value and name props that you are going to change
-        const {value, name} = event.target;
-
-        //Set the state
-        setNote({
-            ...note,
-            //The name of the form field has to be the same as the name of the state's values
-            [name]: value
-        })
+        setNote({id: uuidv4(), text: "", title: ""});
     }
 
     return (
