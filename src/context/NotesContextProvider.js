@@ -42,7 +42,7 @@ function NotesContextProvider(props) {
         Update the local storage
     */
     const addToNotesData = (newNote) => {
-        const newNotes = [...allNotes, newNote];
+        const newNotes = [newNote, ...allNotes];
         setAllNotes(newNotes);
         const notesDataJson = JSON.stringify(newNotes);
         localStorage.setItem('notesData', notesDataJson);
@@ -51,9 +51,9 @@ function NotesContextProvider(props) {
 //------------------------ Edit Note ------------------------
     function editNote(note) {
         const filteredArray = allNotes.filter(item => item.id !== note.id);
-        filteredArray.push(note);
-        setAllNotes(filteredArray);
-        const notesDataJson = JSON.stringify(filteredArray);
+        const newNotes = [note, ...filteredArray];
+        setAllNotes(newNotes);
+        const notesDataJson = JSON.stringify(newNotes);
         localStorage.setItem('notesData', notesDataJson);
     }
 
