@@ -2,6 +2,10 @@
   "name": "noted",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.4.0",
+    "npm": "6.14.5"
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,12 +17,14 @@
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "serve": "^11.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "serve": "serve -s build -l 80",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
