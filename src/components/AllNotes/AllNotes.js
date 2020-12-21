@@ -84,7 +84,7 @@ function Notes() {
     function renderAllNotes() {
         let filteredAllNotes = allNotes;
 
-        // filteredAllNotes = allNotes.filter(item => (item.title.toLowerCase().includes(searchTerm.toLowerCase())));
+        filteredAllNotes = allNotes.filter(item => (item.title.toLowerCase().includes(searchTerm.toLowerCase())));
 
         return filteredAllNotes.map(
             (item) => (
