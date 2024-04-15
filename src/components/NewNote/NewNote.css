@@ -3,13 +3,13 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-image: url("/img/2.jpg");
+    background-image: url("../../../assets/img/fullBackground.jpg");
     background-size: cover;
     padding-top: 11vh;
 }
 
 h1 {
-    color: #5293FB;
+    color: #5293fb;
     padding-bottom: 30px;
 }
 
@@ -44,7 +44,7 @@ h1 {
     align-items: center;
     justify-content: center;
 
-    background-color: #5293FB;
+    background-color: #5293fb;
     padding: 12px;
     border: none;
     border-radius: 3px;

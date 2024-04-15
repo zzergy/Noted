@@ -1,5 +1,5 @@
 .home-container {
-    background-image: url("/img/home.jpg");
+    background-image: url("../../assets/img/home.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -27,7 +27,7 @@
 .title {
     margin: 0;
     font-size: 58px;
-    color: #5293FB;
+    color: #5293fb;
     /*text-shadow: 0px 0px 10px rgb(46, 46, 46);*/
 }
 
@@ -37,15 +37,15 @@
     background-color: transparent;
     margin-top: 25px;
     padding: 10px;
-    color: #5293FB;
+    color: #5293fb;
     font-size: 20px;
     transition-duration: 0.4s;
 }
 
 .get-started-button:hover {
     cursor: pointer;
-    background-color: #5293FB;
-    border: 2px solid #5293FB;
+    background-color: #5293fb;
+    border: 2px solid #5293fb;
     color: #ffffff;
 }
 
@@ -57,22 +57,38 @@
     -o-animation: fadeIn ease 2s;
 }
 @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /*--------------------------------------------*/

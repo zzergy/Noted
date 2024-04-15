@@ -1,5 +1,5 @@
 .background {
-    background-image: url("/img/1-blurred.jpg");
+    background-image: url("../../../assets/img/fullBackgroundBlurred.jpg");
     background-size: cover;
     height: 100vh;
 }
@@ -23,7 +23,6 @@
     width: 40vw;
     box-shadow: 0px 5px 5px 0px rgba(94, 52, 153, 0.3);
     background-color: white;
-
 }
 
 /*------------------------ Delete and Search bar -------------------------*/
@@ -38,7 +37,7 @@
 
 .search-bar {
     border: none;
-    border-bottom: solid 2px #5293FB;
+    border-bottom: solid 2px #5293fb;
     padding: 7px 0 7px 5px;
     font-size: 16px;
     align-self: flex-start;
@@ -76,7 +75,7 @@
 
 .note-item {
     padding: 15px 5px 15px 5px;
-    border-bottom: solid 2px #5293FB;
+    border-bottom: solid 2px #5293fb;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -104,18 +103,16 @@
 .delete-button:hover {
     transition-duration: 360ms;
     background-color: #f82229;
-
 }
 
 .view-button {
     margin-right: 10px;
-    background-color: #5293FB;
+    background-color: #5293fb;
 }
 
 .view-button:hover {
     transition-duration: 360ms;
     background-color: #1379fb;
-
 }
 
 /*------------------------ No Notes Message ------------------------ */
@@ -129,9 +126,7 @@
 
 .message-container > span {
     font-size: 18px;
-    color: #5293FB;
+    color: #5293fb;
     margin-bottom: 10px;
     /*font-weight: bold;*/
 }
-
-
