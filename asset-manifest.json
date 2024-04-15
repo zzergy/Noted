@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/noted/static/css/main.761045a3.css",
-    "main.js": "/noted/static/js/main.294343c9.js",
-    "static/media/home.jpg": "/noted/static/media/home.e5bac611b0c0e15dc5d7.jpg",
-    "static/media/fullBackground.jpg": "/noted/static/media/fullBackground.9266a95d1019ad76c620.jpg",
-    "static/media/fullBackgroundBlurred.jpg": "/noted/static/media/fullBackgroundBlurred.8248f5121a091c831253.jpg",
-    "index.html": "/noted/index.html",
-    "main.761045a3.css.map": "/noted/static/css/main.761045a3.css.map",
-    "main.294343c9.js.map": "/noted/static/js/main.294343c9.js.map"
+    "main.css": "/Noted/static/css/main.08ccc3b1.css",
+    "main.js": "/Noted/static/js/main.294343c9.js",
+    "static/media/home.jpg": "/Noted/static/media/home.e5bac611b0c0e15dc5d7.jpg",
+    "static/media/fullBackground.jpg": "/Noted/static/media/fullBackground.9266a95d1019ad76c620.jpg",
+    "static/media/fullBackgroundBlurred.jpg": "/Noted/static/media/fullBackgroundBlurred.8248f5121a091c831253.jpg",
+    "index.html": "/Noted/index.html",
+    "main.08ccc3b1.css.map": "/Noted/static/css/main.08ccc3b1.css.map",
+    "main.294343c9.js.map": "/Noted/static/js/main.294343c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.761045a3.css",
+    "static/css/main.08ccc3b1.css",
     "static/js/main.294343c9.js"
   ]
 }
