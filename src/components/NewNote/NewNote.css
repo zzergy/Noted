@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-image: url("../../../assets/img/fullBackground.jpg");
+    background-image: url("../../assets/img/fullBackground.jpg");
     background-size: cover;
     padding-top: 11vh;
 }

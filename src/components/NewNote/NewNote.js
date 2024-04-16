@@ -1,10 +1,10 @@
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import "./NewNote.css"
 import SideBar from "../SideBar/SideBar"
 import * as BsIcons from "react-icons/bs"
-import {NoteContext} from "../../context/NotesContextProvider";
-import {useSnackbar} from 'notistack';
-import {v4 as uuidv4} from 'uuid';
+import { NoteContext } from "../../context/NotesContextProvider";
+import { useSnackbar } from 'notistack';
+import { v4 as uuidv4 } from 'uuid';
 
 const mainContainerStyle = {
     display: "flex",
@@ -15,16 +15,16 @@ const mainContainerStyle = {
 const labelStyle = {
     marginBottom: " 10px",
     fontSize: "18px",
-    color: "#5293FB",
+    color: "#0c439c",
     fontWeight: "bold"
 };
 
 function NewNote() {
-    const [note, setNote] = useState({id: "", title: "", text: ""});
-    const {enqueueSnackbar, closeSnackbar} = useSnackbar();
+    const [note, setNote] = useState({ id: "", title: "", text: "" });
+    const { enqueueSnackbar } = useSnackbar();
 
     //Get the notes data from the context by destructuring
-    const {addToNotesData} = useContext(NoteContext);
+    const { addToNotesData } = useContext(NoteContext);
 
     /*Explanation
        The onChange prop of the form has an event prop.
@@ -32,7 +32,7 @@ function NewNote() {
     */
     function handleChange(event) {
         //Get the value and name props that you are going to change
-        const {value, name} = event.target;
+        const { value, name } = event.target;
 
         //Set the state
         setNote({
@@ -67,12 +67,12 @@ function NewNote() {
         }
 
         //Clear the form after submission.
-        setNote({id: uuidv4(), text: "", title: ""});
+        setNote({ id: uuidv4(), text: "", title: "" });
     }
 
     return (
         <div style={mainContainerStyle}>
-            <SideBar/>
+            <SideBar />
 
             <div className="form-container">
                 <h1>Create a new Note</h1>
@@ -90,14 +90,14 @@ function NewNote() {
 
                     <label htmlFor="text" style={labelStyle}>Note</label>
                     <textarea
-                        style={{resize: "none", height: 260}}
+                        style={{ resize: "none", height: 260 }}
                         name="text"
                         id="text"
                         value={note.text}
                         placeholder="Write your note here.."
                         onChange={handleChange}
                     />
-                    <button className="submit-button"><BsIcons.BsPencil size="18px"/>Save Note</button>
+                    <button className="submit-button"><BsIcons.BsPencil size="18px" />Save Note</button>
                 </form>
             </div>
         </div>
